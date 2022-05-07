@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { ColorData, ColorTypes } from '../../../types/color-types'
 import { generateColors } from '../../../utils/api-utils'
 
-export default function getColor(
+export default function getColors(
   req: NextApiRequest,
   res: NextApiResponse<ColorData>
 ) {

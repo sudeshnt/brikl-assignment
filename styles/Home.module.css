@@ -52,17 +52,25 @@
 }
 
 .title,
-.description {
+.subtitle {
     text-align: center;
 }
 
-.descriptionContainer {
+.questionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.description {
+.question {
+    color: #0070f3;
+    font-weight: 400;
+    margin: 2rem 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.subtitle {
     margin: 2rem 0;
     line-height: 1.5;
     font-size: 1.25rem;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ColorTypes, Color } from '../../types/color-types'
-import { convertBrgbToRgb } from '../../utils/utils'
+import { convertToRgb } from '../../utils/utils'
 
 export const SwatchContainer = styled.div`
     margin: 1rem;
@@ -16,14 +16,12 @@ export const SwatchContainer = styled.div`
     background: ${(props: Color) => {
         const { type } = props
         switch(type) {
-            case ColorTypes.RGB:
-                return `rgb(${props.red}, ${props.green}, ${props.blue})`
             case ColorTypes.HSL:
                 return `hsl(${props.hue}, ${props.saturation}%, ${props.lightness}%)`
-            case ColorTypes.BRGB:
-                return `rgb(${convertBrgbToRgb(props.red)}, ${convertBrgbToRgb(props.green)}, ${convertBrgbToRgb(props.blue)})`
-            default:
-                return 'white'
+            default: {
+                const rgb = convertToRgb(props)
+                return `rgb(${rgb.red}, ${rgb.green}, ${rgb.blue})`
+            }
         }
     }};
 

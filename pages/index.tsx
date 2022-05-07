@@ -37,18 +37,16 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Brikl Color Swatches</title>
-        <meta name="description" content="Generate and show color swatches" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <main className={styles.main}>
       
         <h2 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Brikl Color Swatch!</a>
+          Welcome to <a>Brikl Color Swatch!</a>
         </h2>
 
-        <div className={styles.descriptionContainer}>
-          <p className={styles.description}>
+        <div className={styles.questionContainer}>
+          <p className={styles.subtitle}>
             Get started by inputting type & how many colors you need
           </p>
 

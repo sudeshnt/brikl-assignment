@@ -1,71 +1,18 @@
 import { v4 as uuidv4 } from 'uuid';
-import { RGB, ColorTypes, HSL, Color, BRGB } from '../types/color-types';
+import { ColorTypes, Color } from '../types/color-types';
+import ColorRules from './color-rules';
 import { generateRandom } from './utils';
 
-export const rules = {
-  [ColorTypes.RGB]: {
-    min: 0,
-    max: 255
-  },
-  [ColorTypes.HSL]: {
-    min: 0,
-    max: 100,
-    hue: {
-      min: 0,
-      max: 360
-    }
-  },
-  [ColorTypes.BRGB]: {
-    min: 0,
-    max: 10000
-  },
-}
-
-const generateRgbColor = (): RGB => {
-    return <RGB> {
+const generateColor = (type: ColorTypes): Color => {
+    const rules: any = ColorRules[type] ?? ColorRules[ColorTypes.RGB]
+    return <Color> {
       id: uuidv4(),
-      type: ColorTypes.RGB,
-      ...['red', 'green', 'blue'].reduce((acc, curr) => ({
+      type,
+      ...Object.keys(rules).reduce((acc, curr) => ({
         ...acc,
-        [curr]: generateRandom(rules[ColorTypes.RGB].min, rules[ColorTypes.RGB].max)
+        [curr]: generateRandom(rules[curr].min, rules[curr].max)
       }), {})
     }
-}
-
-const generateHslColor = (): HSL => {
-  return <HSL> {
-    id: uuidv4(),
-    type: ColorTypes.HSL,
-    hue: generateRandom(rules[ColorTypes.HSL].hue.min, rules[ColorTypes.HSL].hue.max),
-    ...['saturation', 'lightness'].reduce((acc, curr) => ({
-      ...acc,
-      [curr]: generateRandom(rules[ColorTypes.HSL].min, rules[ColorTypes.HSL].max)
-    }), {})
-  }
-}
-
-const generateBrgbColor = (): BRGB => {
-  return <BRGB> {
-    id: uuidv4(),
-    type: ColorTypes.BRGB,
-    ...['red', 'green', 'blue'].reduce((acc, curr) => ({
-      ...acc,
-      [curr]: generateRandom(rules[ColorTypes.BRGB].min, rules[ColorTypes.BRGB].max)
-    }), {})
-  }
-}
-
-const getColor = (type: ColorTypes) => {
-  switch (type) {
-    case ColorTypes.RGB:
-      return generateRgbColor
-    case ColorTypes.HSL:
-      return generateHslColor
-    case ColorTypes.BRGB:
-      return generateBrgbColor
-    default:
-      return generateRgbColor
-  }
 }
 
 const generateColors = (count: number = 5, types: Array<ColorTypes>): Array<Color> => {
@@ -73,11 +20,11 @@ const generateColors = (count: number = 5, types: Array<ColorTypes>): Array<Colo
   colorTypes = colorTypes.length > 0 ? colorTypes : Object.values(ColorTypes)
   return new Array(count).fill('').map(() => {
     const randType = Math.floor(Math.random() * colorTypes.length);
-    return getColor(colorTypes[randType])()
+    return generateColor(colorTypes[randType])
   })
 }
 
 export {
-  getColor,
+  generateColor,
   generateColors
 }
