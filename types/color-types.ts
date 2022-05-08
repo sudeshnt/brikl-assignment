@@ -16,12 +16,12 @@ export interface RGB extends BaseColor<ColorTypes.RGB> {
   blue: number;
 }
 
-interface HSL extends BaseColor<ColorTypes.HSL> {
+export interface HSL extends BaseColor<ColorTypes.HSL> {
   hue: number;
   saturation: number;
   lightness: number;
 }
-interface RGBVariant<T> extends BaseColor<T> {
+export interface RGBVariant<T> extends BaseColor<T> {
   red: number;
   green: number;
   blue: number;

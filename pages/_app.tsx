@@ -6,6 +6,11 @@ import { BgColorsOutlined } from '@ant-design/icons';
 import styles from '../styles/Home.module.css'
 import '../styles/globals.css'
 
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
+
 const items = [
   {
     key: 'home',

@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { ColorTypes, Color } from '../types/color-types';
 import ColorRules from './color-rules';
-import { generateRandom } from './utils';
+import { generateRandomNumber } from './utils';
 
 const generateColor = (type: ColorTypes): Color => {
     const rules: any = ColorRules[type] ?? ColorRules[ColorTypes.RGB]
@@ -10,7 +10,7 @@ const generateColor = (type: ColorTypes): Color => {
       type,
       ...Object.keys(rules).reduce((acc, curr) => ({
         ...acc,
-        [curr]: generateRandom(rules[curr].min, rules[curr].max)
+        [curr]: generateRandomNumber(rules[curr].min, rules[curr].max)
       }), {})
     }
 }

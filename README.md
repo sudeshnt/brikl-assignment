@@ -85,6 +85,7 @@
 - [Typescript](https://www.typescriptlang.org/)
 - [Ant Design](https://ant.design/)
 - [Styled Components](https://styled-components.com/)
+- [Lodash](https://lodash.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

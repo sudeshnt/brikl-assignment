@@ -39,10 +39,10 @@ const ColorPicker = () => {
       </p>
       { selectedPath && selectedColor && <div className={styles.colorPicker}>
           <span>Select Color to set for the selected Path</span>
-          <input type="color" value={selectedColor} onChange={colorChange}/>
+          <input title="Select" type="color" value={selectedColor} onChange={colorChange}/>
         </div>
       }
-      <object id="color-change-svg-2" data='/brikl-logo.svg' type="image/svg+xml" height="300" />
+      <object id="color-change-svg-2" data-testid="color-change-svg-2" data='/brikl-logo.svg' type="image/svg+xml" height="300" />
     </div>
   )
 }

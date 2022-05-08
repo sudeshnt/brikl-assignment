@@ -7,7 +7,7 @@ const defaultRgb: Partial<RGB> = {
   blue: 255
 }
 
-const generateRandom = (min: number, max: number): number => {
+const generateRandomNumber= (min: number, max: number): number => {
   let diff = max - min;
   let rand = Math.random();
   rand = Math.floor( rand * diff);
@@ -41,6 +41,6 @@ const convertToRgb = (color: RGBVariantColor): RGB => {
 }
 
 export {
-  generateRandom,
+  generateRandomNumber,
   convertToRgb
 }
