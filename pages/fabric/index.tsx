@@ -11,7 +11,7 @@ const FabricPage: NextPage = () => {
     const text = new fabric.Textbox('Lorem ipsum dolor sit amet, consectetu', {
       width:300,
       cursorColor:"limegreen",
-      top:150,
+      top:200,
       left:300,
       angle: 15,
       fill: 'limegreen',
@@ -24,7 +24,7 @@ const FabricPage: NextPage = () => {
     const path = new fabric.Path('M0,0 70,130 100,-60 50,-10z', {
       fill: 'green',
       angle: 60,
-      top:300,
+      top:350,
       left:500
     })
     canvas?.add(path)
@@ -33,7 +33,7 @@ const FabricPage: NextPage = () => {
   const drawEllipse = () => {
     var ellipse = new fabric.Ellipse({
       left: 400,
-      top: 0,
+      top: 50,
       rx: 100,
       ry: 60
     })
@@ -54,7 +54,7 @@ const FabricPage: NextPage = () => {
     fabric.Image.fromURL('fabric/google.png', (img) => {
       img.set({
         left: 150,
-        top: 50
+        top: 100
       })
       img.scale(0.1)
       canvas?.add(img)

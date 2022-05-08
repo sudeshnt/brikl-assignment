@@ -16,5 +16,10 @@ a {
 }
 
 .container {
-    padding-top: 60px;
+    padding-top: 46px;
+}
+
+.canvas-container {
+    width: 800px !important;
+    height: calc(100vh - 80px) !important;
 }
