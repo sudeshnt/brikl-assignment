@@ -42,7 +42,7 @@ const ColorPicker = () => {
           <input type="color" value={selectedColor} onChange={colorChange}/>
         </div>
       }
-      <object id="color-change-svg-2" data='/brikl-logo.svg' type="image/svg+xml" />
+      <object id="color-change-svg-2" data='/brikl-logo.svg' type="image/svg+xml" height="300" />
     </div>
   )
 }

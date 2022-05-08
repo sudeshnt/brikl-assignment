@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { ColorTypes, Color } from '../../types/color-types'
 import { convertToRgb } from '../../utils/utils'
 
-export const SwatchContainer = styled.div`
+export const SwatchItem = styled.div`
     margin: 1rem;
     padding: 30px;
     text-align: left;

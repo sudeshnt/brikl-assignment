@@ -24,7 +24,7 @@ const ColorChange = () => {
       <p className={styles.question}>
         1. Change color of svg element by using DOM manipulation
       </p>
-      <object id="color-change-svg-1" data='/brikl-logo.svg' type="image/svg+xml" />
+      <object id="color-change-svg-1" data='/brikl-logo.svg' type="image/svg+xml" height={250} />
       <Button type="primary" onClick={changeColor}>Change Color</Button>
     </div>
   )
