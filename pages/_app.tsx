@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { Menu } from 'antd';
-import { BgColorsOutlined } from '@ant-design/icons';
+import { WindowsOutlined, BgColorsOutlined, CodeSandboxOutlined, DotChartOutlined } from '@ant-design/icons';
 import styles from '../styles/Home.module.css'
 import '../styles/globals.css'
 
@@ -14,7 +14,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const items = [
   {
     key: 'home',
-    icon: <BgColorsOutlined />,
+    icon: <WindowsOutlined />,
     label:  <Link href="/">
       Color Swatch
     </Link>
@@ -25,6 +25,20 @@ const items = [
     label: <Link href="/studio">
       Studio
     </Link>
+  },
+  {
+    key: 'box-space',
+    icon: <CodeSandboxOutlined />,
+    label: <Link href="/box-space">
+      Box Space
+    </Link>
+  },
+  {
+    key: 'fabric',
+    icon: <DotChartOutlined />,
+    label: <Link href="/fabric">
+      Fabric
+    </Link>
   }
 ]
 
@@ -33,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Menu className={styles.navigation} mode="horizontal" defaultSelectedKeys={[router.pathname === '/studio' ? 'studio' : 'home']} items={items} />
+      <Menu className={styles.navigation} mode="horizontal" defaultSelectedKeys={[router.pathname.replace(/\//g, '') ?? 'home']} items={items} />
       <div className="container">
         <Component {...pageProps} />
       </div>

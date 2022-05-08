@@ -11,7 +11,7 @@
 }
 
 .main {
-    min-height: calc(100vh - 83px);
+    min-height: calc(100vh - 180px);
     padding: 2rem 0;
     flex: 1;
     display: flex;
@@ -107,6 +107,11 @@
 
 .colorPicker span {
     margin-right: 10px;
+}
+
+.threeCanvas {
+    height: calc(100vh - 60px) !important;
+    background: black;
 }
 
 @media (max-width: 600px) {

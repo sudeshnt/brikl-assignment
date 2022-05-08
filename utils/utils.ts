@@ -40,7 +40,21 @@ const convertToRgb = (color: RGBVariantColor): RGB => {
   }
 }
 
+const getPositionsIn3DSpace = (count = 1000, space = 30) => {
+  let positions = []
+  for (let i = 0; i < count; i++) {
+    const temp = {
+      x: generateRandomNumber(-space, space),
+      y: generateRandomNumber(-space, space),
+      z: generateRandomNumber(-space, space)
+    }
+    positions.push(temp)
+  }
+  return positions
+}
+
 export {
   generateRandomNumber,
-  convertToRgb
+  convertToRgb,
+  getPositionsIn3DSpace
 }

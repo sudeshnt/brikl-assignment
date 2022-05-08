@@ -79,7 +79,7 @@
 
 ### Built With
 
-- I have used [firebase](https://firebase.google.com/) storage to temporarily host this application to provide a quick preview to the observers.
+<!-- - I have used [firebase](https://firebase.google.com/) storage to temporarily host this application to provide a quick preview to the observers. -->
 - [React.js](https://reactjs.org/)
 - [Next.js](https://nextjs.org/docs)
 - [Typescript](https://www.typescriptlang.org/)
@@ -138,7 +138,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 5. Launch the test runner in the interactive watch mode.
 
 ```js
-npm test
+npm run test
+yarn test
 ```
 
 6. Builds the app for production to the build folder.
