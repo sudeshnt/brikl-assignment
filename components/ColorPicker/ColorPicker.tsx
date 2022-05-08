@@ -6,7 +6,7 @@ const ColorPicker = () => {
   const [selectedColor, setSelectedColor] = useState<string | null>(null)
 
   const attachEventListeners = () => {
-    const list: any = document.getElementById('color-change-svg')
+    const list: any = document.getElementById('color-change-svg-2')
     const svgDoc = list.getSVGDocument()
     const allPaths = svgDoc.querySelectorAll(`path`) as Array<SVGPathElement>
     allPaths.forEach((path) => {
@@ -25,7 +25,7 @@ const ColorPicker = () => {
   }
 
   useEffect(() => {
-    const list: any = document.getElementById('color-change-svg')
+    const list: any = document.getElementById('color-change-svg-2')
 
     list.addEventListener("load", () => {
       attachEventListeners()
@@ -42,7 +42,7 @@ const ColorPicker = () => {
           <input type="color" value={selectedColor} onChange={colorChange}/>
         </div>
       }
-      <object id="color-change-svg" data='/brikl-logo.svg' type="image/svg+xml" />
+      <object id="color-change-svg-2" data='/brikl-logo.svg' type="image/svg+xml" />
     </div>
   )
 }

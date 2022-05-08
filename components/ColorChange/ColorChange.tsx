@@ -8,7 +8,7 @@ const ColorChange = () => {
   const [currentTextColor, setCurrentTextColor] = useState('black')
 
   const changeColor = () => {
-    const list: any = document.getElementById('color-change-svg')
+    const list: any = document.getElementById('color-change-svg-1')
     const svgDoc = list.getSVGDocument()
     const textPaths = svgDoc.querySelectorAll(`path[fill='${currentTextColor}']`)
     const randColor = generateColor(ColorTypes.RGB) as RGB
@@ -24,7 +24,7 @@ const ColorChange = () => {
       <p className={styles.question}>
         1. Change color of svg element by using DOM manipulation
       </p>
-      <object id="color-change-svg" data='/brikl-logo.svg' type="image/svg+xml" />
+      <object id="color-change-svg-1" data='/brikl-logo.svg' type="image/svg+xml" />
       <Button type="primary" onClick={changeColor}>Change Color</Button>
     </div>
   )
