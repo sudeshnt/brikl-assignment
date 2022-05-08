@@ -8,13 +8,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://amity-delivery-service.web.app">
-    <img src="public/brikl-logo.svg" alt="Logo" height="100">
-  </a>
+  <img src="public/logo.svg" alt="Logo" height="100">
   <h1 align="center">Brikl Studio Assignment</h1>
   <p align="center">
-    <a href="https://amity-delivery-service.web.app"><strong>View Demo »</strong></a>
-    <br />
     <a href="#how-to-add-custom-color-space"><strong>How to add custom color spaces »</strong></a>
     <br />
     <br />
@@ -23,6 +19,7 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
+  <br />
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -49,14 +46,15 @@
 
 <div align="center">
   <img src="public/screenshots/1.png" alt="Logo" height="200">
-  <img src="public/screenshots/2.png" alt="Logo" height="200">
+  <img src="public/screenshots/2.png" alt="Logo" height="250">
   <img src="public/screenshots/3.png" alt="Logo" height="200">
   <img src="public/screenshots/4.png" alt="Logo" height="200">
 </div>
+<br />
 
-In this Application you have the ability to
+### In this Application you have the ability to
 
-- Generate **color swatches** consisting **5, 10, 25 & 50** colors in defined color spaces (**RGB, HSL, Custom spaces BRGB etc...**)
+- Generate **color swatches** consisting **5, 10, 25 & 50** colors in defined color spaces (**RGB, HSL, Custom spaces BRGB etc.**)
 - In studio page you have the ability to change colors of paths' in an svg with DOM manipulation and example usage of the canvas api to draw basic shapes.
 
 ### How to Add Custom Color Space
@@ -87,7 +85,6 @@ In this Application you have the ability to
 - [Typescript](https://www.typescriptlang.org/)
 - [Ant Design](https://ant.design/)
 - [Styled Components](https://styled-components.com/)
-- [Lodash](https://lodash.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
