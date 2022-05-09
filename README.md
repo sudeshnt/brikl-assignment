@@ -8,9 +8,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="public/logo.svg" alt="Logo" height="100">
+  <a href="https://brikl-studio-assignment.vercel.app">
+    <img src="public/logo.svg" alt="Logo" height="100">
+  </a>
   <h1 align="center">Brikl Studio Assignment</h1>
   <p align="center">
+    <a href="https://brikl-studio-assignment.vercel.app"><strong>View Demo »</strong></a>
+    <br />
     <a href="#how-to-add-custom-color-space"><strong>How to add custom color spaces »</strong></a>
     <br />
     <br />
