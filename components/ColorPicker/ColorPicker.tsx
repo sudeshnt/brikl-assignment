@@ -20,6 +20,7 @@ const ColorPicker = () => {
 
   const colorChange = (e: any) => {
     if (selectedPath) {
+      setSelectedColor(e.target.value)
       selectedPath.setAttribute('fill', e.target.value)
     }
   }
