@@ -22,4 +22,5 @@ a {
 .canvas-container {
     width: 800px !important;
     height: calc(100vh - 80px) !important;
+    margin: auto;
 }
