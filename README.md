@@ -48,14 +48,19 @@
   <img src="public/screenshots/1.png" alt="Logo" height="200">
   <img src="public/screenshots/2.png" alt="Logo" height="250">
   <img src="public/screenshots/3.png" alt="Logo" height="200">
-  <img src="public/screenshots/4.png" alt="Logo" height="200">
+  <br>
+  <img src="public/screenshots/4.png" alt="Logo" height="250">
+  <img src="public/screenshots/8.png" alt="Logo" height="250">
+  <img src="public/screenshots/9.png" alt="Logo" height="250">
 </div>
 <br />
 
 ### In this Application you have the ability to
 
 - Generate **color swatches** consisting **5, 10, 25 & 50** colors in defined color spaces (**RGB, HSL, Custom spaces BRGB etc.**)
-- In studio page you have the ability to change colors of paths' in an svg with DOM manipulation and example usage of the canvas api to draw basic shapes.
+- In **Studio** page you have the ability to change colors of paths' in an svg with DOM manipulation and example usage of the canvas api to draw basic shapes.
+- In **Box Space** page you will be able to go through a 3D space filled with colored boxes.
+- In the **Fabric** page you will have a canvas with some basic elements where you can freely move, resize & rotate within that space.
 
 ### How to Add Custom Color Space
 
