@@ -8,6 +8,7 @@ import '../styles/globals.css'
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { useMemo } from 'react';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -44,10 +45,13 @@ const items = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+  const selectedKeys = useMemo(() => {
+    return [router.pathname.replace(/\//g, '').length > 0 ? router.pathname.replace(/\//g, '') : 'home']
+  }, [router.pathname])
 
   return (
     <>
-      <Menu className={styles.navigation} mode="horizontal" defaultSelectedKeys={[router.pathname.replace(/\//g, '') ?? 'home']} items={items} />
+      <Menu className={styles.navigation} mode="horizontal" defaultSelectedKeys={selectedKeys} items={items} />
       <div className="container">
         <Component {...pageProps} />
       </div>
