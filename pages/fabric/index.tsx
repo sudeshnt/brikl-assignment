@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { NextPage } from 'next'
-import { fabric } from 'fabric'
+const { fabric } = require('fabric-pure-browser');
+
 import { useEffect, useState } from 'react';
 
 const FabricPage: NextPage = () => {
@@ -51,7 +52,7 @@ const FabricPage: NextPage = () => {
   }
 
   const drawLogo = () => {
-    fabric.Image.fromURL('fabric/google.png', (img) => {
+    fabric.Image.fromURL('fabric/google.png', (img: any) => {
       img.set({
         left: 150,
         top: 100
@@ -62,7 +63,7 @@ const FabricPage: NextPage = () => {
   }
 
   const drawRepeatedBackground = () => {
-    fabric.Image.fromURL('fabric/ladybug.png', (img) => {
+    fabric.Image.fromURL('fabric/ladybug.png', (img: any) => {
       img.scaleToWidth(40);
       var patternSourceCanvas = new fabric.StaticCanvas('')
       patternSourceCanvas.setDimensions({
